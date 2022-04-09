@@ -1,0 +1,43 @@
+Sistema para Gestão de Vendas
+ian sommerville - livro softare engen
+
+compreensao de domínio
+coleta de requisitos
+classificação
+resolução de conflitos
+definição das prioridades
+verificação de requisitos
+levantamento de requisitos
+////////////////////////////////////
+sistema para gestão de vendas
+cadastro de vendedores
+cadastro de clientes
+cadastro de produtos
+registro de vendas
+relatórios em geral
+///////////////////////////////////
+diagrama de casos de uso do sistema
+DCU
+......................................
+cliente
+vendedor
+administrador
+......................................
+^
+realizar login
+{adm, vendedor, clientes}
+cadastrar clientes
+{adm, vendedor, clientes}
+cadastrar produtos
+{adm, vendedor}
+registrar vendas
+{adm, vendedor, cliente}
+cadastrar vendedores
+{adm}
+gerar pgto
+{inlcude}
+emitir relatórios
+{adm}
+emitir relatórios de vendas
+{vendedor}
+extender > emitir relatórios
