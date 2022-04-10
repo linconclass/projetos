@@ -29,7 +29,17 @@ namespace Sistema_Vendas.Controllers
         {
             if (ModelState.IsValid)
             {
-                bool loginOK = Login.ValidarLogin();               
+                bool loginOK = Login.ValidarLogin();
+                if (loginOK)
+                {
+                    HttpContext.Session.SetString("IdUsuarioLogin", Login.Id);
+                    HttpContext.Session.SetString("NomeUsuarioLogin", Login.Nome);
+                    return RedirectToAction("Menu", "Home");
+                }
+                else 
+                {
+                    TempData["ErrorLogin"] = "E-mail ou Senha são inválidos!";
+                }
             }
             return View();
         }
