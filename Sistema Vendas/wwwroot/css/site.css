@@ -14,7 +14,23 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 60px;  
+}
+
+header {
+    background-color: indigo;
+    color: azure;
+}
+
+footer {
+    position: absolute;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;    
+    margin-bottom: 0px;
+    color: azure;
+    background-color: indigo;
 }
 
 /*ErrorLogin*/
@@ -88,4 +104,21 @@ body {
     top: -11px;
     z-index: 1;
 }
+
 /*fim pagina login*/
+
+/*card menu*/
+.card-img-top {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-group {    
+    text-align: center;
+    font-size: medium;
+    color: #242424;
+}
+/*fim card menu*/

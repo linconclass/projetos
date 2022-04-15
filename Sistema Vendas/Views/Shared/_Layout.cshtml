@@ -16,18 +16,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </head>
-<body>
+<body onload="CarregaUsuarioLogado()">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sistema Controle de Vendas Web</a>
+                <h5>Sistema Gestão de Vendas</h5>                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        @*<li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
@@ -35,8 +35,11 @@
                         </li>
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Entrar no Sistema</a>
-                        </li>
+                        </li>*@
                     </ul>
+                    @using Microsoft.AspNetCore.Http
+                    @inject IHttpContextAccessor HttpContextAccessor
+                    <div id="NomeUsuarioLogado"></div>
                 </div>
             </div>
         </nav>
@@ -48,13 +51,34 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Sistema_Vendas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container" style="color: azure">
+            &copy; 2022 - Sistema Gestão de Vendas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Termo de Privacidade</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+            function CarregaUsuarioLogado(){
+                var nome = '@HttpContextAccessor.HttpContext.Session.GetString("NomeUsuarioLogin")'
+                
+                
+                
+                if(nome != "") //Usuário Logado
+                {
+                    var divNome = document.getElementById("NomeUsuarioLogado");
+                    divNome.innerHTML = "Olá " + nome + " <a href='../Home/Login/0'>(Sair)</a>";
+                    divNome.style = "color: #fffff; padding-top: 0px;";
+                }
+                else{ //Usuário não logado
+                    window.location.href = '../Home/Login';
+                }
+            }
+    
+    </script>
+
+
 </body>
 </html>
