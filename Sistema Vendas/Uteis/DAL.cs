@@ -15,7 +15,7 @@ namespace SistemaVendas.Uteis
         private static string User = "root";
         private static string Password = "";
         private static string ConnectionString = $"Server={Server};Database={Database};Uid={User};Pwd={Password};Sslmode=none;Charset=utf8;";
-        private static MySqlConnection Connection;
+        private static MySqlConnection? Connection;
 
         public DAL()
         {

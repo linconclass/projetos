@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\01 Programação\Projetos\ASPNET_MVC\Sistema Vendas
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/01 Programação/Projetos/ASPNET_MVC/Sistema Vendas/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/01 Programação/Projetos/ASPNET_MVC/Sistema Vendas/Views/Cliente/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDYWRhc3Ryby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/01 Programação/Projetos/ASPNET_MVC/Sistema Vendas/Views/Cliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/01 Programação/Projetos/ASPNET_MVC/Sistema Vendas/Views/Home/Contato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YXRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/01 Programação/Projetos/ASPNET_MVC/Sistema Vendas/Views/Home/Login.cshtml]
